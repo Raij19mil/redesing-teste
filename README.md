@@ -21,6 +21,21 @@ DESIGN.md             Sistema visual (impeccable)
 
 Rodar localmente: `cd site && python3 -m http.server 8000` → http://localhost:8000
 
+## Publicar na Vercel
+
+O `vercel.json` na raiz já deixa tudo pronto: sem build, servindo a pasta `site/`,
+URLs limpas (`/clube`, `/eventos`, `/contato`), a `404.html` própria, cabeçalhos de
+segurança e cache longo para fontes e imagens.
+
+1. Em [vercel.com/new](https://vercel.com/new), importe o repositório `raij19mil/redesing-teste`.
+2. Deixe **Framework Preset = Other** e **Root Directory** vazio (raiz do repositório). Não precisa
+   preencher build nem output: o `vercel.json` cuida disso.
+3. Clique em **Deploy**. Cada push na branch gera um preview; a branch de produção publica o site.
+4. Para usar o domínio próprio, adicione `latvian.com.br` em *Settings → Domains* e ajuste o DNS
+   conforme a Vercel indicar.
+
+Pela linha de comando: `npx vercel` (preview) e `npx vercel --prod` (produção), na raiz do repositório.
+
 ## Antes de publicar — confirmar com o cliente
 
 Os fatos abaixo vieram de matérias públicas na imprensa, não do cliente:
