@@ -3,274 +3,181 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>The Latvian — Business & Lounge | Clube de negócios em Salvador</title>
-<meta name="description" content="Clube privado de negócios e experiências em Salvador. Luz baixa, boa conversa, fumoir e jazz, na Bahia Marina e no Salvador Shopping. Somente associados.">
-<meta name="theme-color" content="#0a0807">
-<meta property="og:title" content="The Latvian — Business & Lounge | Clube de negócios em Salvador">
-<meta property="og:description" content="Clube privado de negócios e experiências em Salvador. Luz baixa, boa conversa, fumoir e jazz, na Bahia Marina e no Salvador Shopping. Somente associados.">
+<title>The Latvian — Business & Lounge | Salvador</title>
+<meta name="description" content="Clube privado de negócios em Salvador. Acesso somente para associados, por convite.">
+<meta name="theme-color" content="#0b0908">
+<meta property="og:title" content="The Latvian — Business & Lounge | Salvador">
+<meta property="og:description" content="Clube privado de negócios em Salvador. Acesso somente para associados, por convite.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="assets/img/fotos/salao-palco.webp">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/main.js" defer></script>
 </head>
 <body data-page="inicio">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header">
-  <div class="frame grid">
-    <a class="pill" href="index.html" aria-label="The Latvian — página inicial"><img src="assets/img/emblem.svg" alt="" width="26" height="26">The Latvian ©1881</a>
-    <nav class="nav-a" aria-label="Principal">
+  <div class="wrap">
+    <nav aria-label="Principal">
       <a href="clube.html">O Clube</a>
       <a href="eventos.html">Eventos</a>
     </nav>
-    <nav class="nav-b" aria-label="Contato">
+    <a class="brand" href="index.html" aria-label="The Latvian — página inicial"><img src="assets/img/emblem.svg" alt="" width="54" height="54"></a>
+    <nav aria-label="Acesso">
       <a href="contato.html">Contato</a>
+      <a href="#convite">Convite</a>
     </nav>
-    <div class="header-end">
-      <a class="member-link" href="contato.html?assunto=associado" data-member-link>Área do associado</a>
-      <a class="paren" href="#convite">Solicitar convite</a>
-    </div>
-    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>(Menu)</button>
+    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>Menu</button>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="mobile-menu__top">
-    <a class="pill" href="index.html"><img src="assets/img/emblem.svg" alt="" width="26" height="26">The Latvian ©1881</a>
-    <button class="menu-toggle" type="button" style="display:inline-flex" data-menu-close>(Fechar)</button>
+    <a class="brand" href="index.html" aria-label="Início"><img src="assets/img/emblem.svg" alt="" width="54" height="54"></a>
+    <button class="menu-toggle" type="button" data-menu-close>Fechar</button>
   </div>
   <nav aria-label="Principal (móvel)">
-    <a href="index.html" aria-current="page"><span class="count">01</span>Início</a>
-    <a href="clube.html"><span class="count">02</span>O Clube</a>
-    <a href="eventos.html"><span class="count">03</span>Eventos</a>
-    <a href="contato.html"><span class="count">04</span>Contato</a>
+    <a href="index.html" aria-current="page">Início</a>
+    <a href="clube.html">O Clube</a>
+    <a href="eventos.html">Eventos</a>
+    <a href="contato.html">Contato</a>
   </nav>
-  <div class="mobile-menu__foot">
-    <a class="btn" href="#convite">Solicitar convite</a>
-    <a class="member-link label" href="contato.html?assunto=associado" data-member-link>Área do associado</a>
-  </div>
+  <a class="btn" href="#convite">Solicitar convite</a>
 </div>
 <main id="conteudo">
 
 <section class="hero" aria-labelledby="hero-title">
   <div class="hero__photo"><img src="assets/img/fotos/salao-palco.webp" alt="Salão à meia-luz com abajures nas mesas e palco de cortina vermelha" width="1080" height="608" fetchpriority="high"></div>
   <div class="hero__dark" aria-hidden="true"></div>
-  <span class="hero__hint label" aria-hidden="true">Mova a luz pela sala</span>
-  <div class="hero__body frame">
-    <div class="grid">
-      <h1 id="hero-title">Os melhores negócios se fecham <em>à meia-luz.</em></h1>
-      <p class="hero__lede">O cenário ideal para discutir o futuro do seu negócio ou comemorar conquistas junto com o seu time.</p>
-      <div class="hero__actions">
-        <a class="btn" href="#convite">Solicitar convite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
-        <a class="link-arrow" href="#sala">Entrar na sala <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
-      </div>
-      <div class="hero__meta">
-        <p><span class="label">Unidades</span>Bahia Marina · Salvador Shopping</p>
-        <p><span class="label">Horário</span>Seg a sex, 12h às 18h</p>
-        <p><span class="label">Associados</span>Mais de 200</p>
-        <p><span class="label">Acesso</span>Somente associados</p>
-      </div>
+  <div class="hero__inner wrap">
+    <img class="hero__emblem" src="assets/img/emblem.svg" alt="" width="112" height="112">
+    <h1 id="hero-title">Os melhores negócios se fecham <em>à meia-luz.</em></h1>
+    <p class="hero__lede">Um clube privado de negócios em Salvador. Somente para associados.</p>
+    <div class="actions">
+      <a class="btn" href="#convite">Solicitar convite</a>
+      <a class="link" href="#sala">Conhecer a casa</a>
     </div>
   </div>
+  <span class="hero__foot caps" aria-hidden="true">Business &amp; Lounge · Est. 1881</span>
 </section>
 
-<section class="section frame" id="sala" aria-labelledby="sala-title">
-  <div class="grid index-head reveal">
-      <span class="label">Como é estar lá</span><span class="count">(03)</span>
-      <h2 id="sala-title">A porta fecha. <em>A cidade fica do lado de fora.</em></h2>
-      <p>Luz baixa, som de verdade e uma mesa onde ninguém tem pressa. É assim que o clube recebe.</p>
-    </div>
+<section class="section wrap" id="sala" aria-labelledby="sala-title">
+  <div class="head reveal">
+    <div class="ornament" aria-hidden="true"><i></i></div>
+    <span class="caps">A casa</span>
+    <h2 id="sala-title">Do lado de dentro, <em>o tempo é outro.</em></h2>
+  </div>
   <div class="scenes">
-    <div class="grid scene scene--a reveal">
-      <figure><img src="assets/img/fotos/salao.webp" alt="Mesas redondas com abajures acesos diante de um palco com piano" loading="lazy" style="object-position:50% 60%"><figcaption class="scene__no">1. A luz</figcaption></figure>
-      <div class="scene__text"><h3>Abajur aceso, voz baixa.</h3><p>A luz fica nas mesas, não no teto. Cada conversa ganha o seu próprio círculo, e o resto da sala desaparece.</p></div>
+    <div class="scene reveal">
+      <figure><img src="assets/img/fotos/salao.webp" alt="Mesas com abajures acesos diante de um palco com piano" loading="lazy" style="object-position:50% 70%"></figure>
+      <div class="scene__text"><span class="caps">I · A luz</span><h3>Abajur aceso, voz baixa.</h3><p>Cada mesa tem seu próprio círculo de luz. O resto da sala desaparece.</p></div>
     </div>
-    <div class="grid scene scene--b reveal">
-      <figure><img src="assets/img/fotos/jazz.webp" alt="Pianista e trombonista tocando jazz sob um holofote, em preto e branco" loading="lazy"><figcaption class="scene__no">2. O som</figcaption></figure>
-      <div class="scene__text"><h3>O som faz a sala.</h3><p>Música ao vivo nas noites de programação. Nos outros dias, o volume certo para fechar um acordo sem levantar a voz.</p></div>
+    <div class="scene reveal">
+      <figure><img src="assets/img/fotos/jazz.webp" alt="Pianista e trombonista tocando jazz, em preto e branco" loading="lazy"></figure>
+      <div class="scene__text"><span class="caps">II · O som</span><h3>O volume certo.</h3><p>Música nas noites de programação. Silêncio para as conversas que importam.</p></div>
     </div>
-    <div class="grid scene scene--c reveal">
-      <figure><img src="assets/img/fotos/sax.webp" alt="Saxofone dourado em close, com luzes quentes desfocadas ao fundo" loading="lazy" style="object-position:50% 45%"><figcaption class="scene__no">3. O brinde</figcaption></figure>
-      <div class="scene__text"><h3>Fumoir, coquetel e a hora do brinde.</h3><p>Charutos num ambiente com tratamento acústico e exaustão dedicada, coquetelaria de autor e o lugar certo para celebrar com o time.</p></div>
+    <div class="scene reveal">
+      <figure><img src="assets/img/fotos/sax.webp" alt="Saxofone dourado em close, com luzes quentes ao fundo" loading="lazy" style="object-position:50% 40%"></figure>
+      <div class="scene__text"><span class="caps">III · O brinde</span><h3>Fumoir e coquetelaria.</h3><p>Para o acordo fechado, ou para a meta batida com o time.</p></div>
     </div>
   </div>
 </section>
 
-<section class="section frame" aria-labelledby="clube-title">
-  <div class="grid manifesto reveal">
-    <span class="label">(O Clube)</span>
+<section class="section narrow" aria-labelledby="clube-title">
+  <div class="statement reveal">
+    <div class="ornament" aria-hidden="true"><i></i></div>
     <h2 id="clube-title" class="visually-hidden">O clube</h2>
-    <p class="manifesto__text">The Latvian é um lounge corporativo e clube de negócios para associados. Um endereço discreto onde executivos, empreendedores e lideranças de Salvador encontram <em>privacidade, serviço atento e as pessoas certas por perto.</em></p>
-    <p class="manifesto__aside">Mais de 200 associados usam o clube para receber clientes, fechar acordos, almoçar sem pressa e celebrar com o time. <a class="link-arrow" href="clube.html">Conhecer o clube <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></p>
+    <blockquote>Um endereço discreto, onde lideranças de Salvador encontram <em>privacidade</em>, serviço atento e as pessoas certas.</blockquote>
+    <footer class="caps"><a href="clube.html" class="gilt" style="text-decoration:none">Conhecer o clube</a></footer>
   </div>
 </section>
 
-<section class="section frame" aria-labelledby="dia-title">
-  <div class="grid index-head reveal">
-      <span class="label">Um dia no clube</span><span class="count">12h — 18h</span>
-      <h2 id="dia-title">Do almoço <em>ao último brinde.</em></h2>
-    </div>
-  <ol class="hours">
-    <li class="grid hour"><span class="hour__time">12h</span><span class="hour__lamp" aria-hidden="true"></span><h3>Almoço de negócios</h3><p>Mesa reservada, cozinha autoral e um serviço que não interrompe a conversa.</p></li>
-    <li class="grid hour"><span class="hour__time">14h</span><span class="hour__lamp" aria-hidden="true"></span><h3>Reuniões</h3><p>Mesas de trabalho, internet e privacidade para receber clientes e parceiros.</p></li>
-    <li class="grid hour"><span class="hour__time">16h</span><span class="hour__lamp" aria-hidden="true"></span><h3>Fumoir</h3><p>Charutos e coquetelaria, com tratamento acústico e exaustão dedicada.</p></li>
-    <li class="grid hour"><span class="hour__time">18h</span><span class="hour__lamp" aria-hidden="true"></span><h3>Celebração</h3><p>O brinde do contrato assinado ou da meta batida com o seu time.</p></li>
-  </ol>
-</section>
-
-<section class="curtain" id="espacos" aria-labelledby="espacos-title">
-  <div class="frame">
-    <div class="grid index-head reveal">
-      <span class="label">Espaços</span><span class="count">(02)</span>
-      <h2 id="espacos-title">Dois endereços. <em>A mesma casa.</em></h2>
-      <p>Escolha a unidade mais perto da sua agenda. O associado é recebido nas duas.</p>
-    </div>
-    <div class="grid venues">
-      <article class="venue reveal">
-        <span class="label">Bahia Marina</span>
-        <h3>A casa original, à beira da baía.</h3>
-        <p>Lounge, fumoir e mesas para reuniões, com a Baía de Todos-os-Santos como vizinha.</p>
-        <ul><li>Fumoir</li><li>Coquetelaria</li><li>Cozinha autoral</li><li>Mesas para reuniões</li></ul>
-        <div class="venue__meta"><span>Seg a sex · 12h às 18h</span><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Bahia+Marina+Salvador" target="_blank" rel="noopener">Como chegar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></div>
-      </article>
-      <article class="venue reveal">
-        <span class="label">Salvador Shopping</span>
-        <h3>No mezanino, longe do barulho.</h3>
-        <p>Acima do restaurante 33 Contemporâneo, no Caminho das Árvores, perto de onde a cidade trabalha.</p>
-        <ul><li>Bar próprio</li><li>Mesas de trabalho</li><li>Sala de TV</li><li>Internet</li><li>Atendimento personalizado</li><li>Ambiente reservado</li></ul>
-        <div class="venue__meta"><span>Seg a sex · 12h às 18h</span><a class="link-arrow" href="https://www.google.com/maps/search/?api=1&amp;query=Salvador+Shopping+33+Contempor%C3%A2neo" target="_blank" rel="noopener">Como chegar <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></div>
-      </article>
-    </div>
+<section class="section wrap" aria-labelledby="casas-title">
+  <div class="head reveal">
+    <div class="ornament" aria-hidden="true"><i></i></div>
+    <span class="caps">Endereços</span>
+    <h2 id="casas-title">Duas casas.</h2>
+  </div>
+  <div class="houses reveal">
+    <article class="house">
+      <span class="caps">I</span>
+      <h3>Bahia Marina</h3>
+      <p>A casa original, à beira da Baía de Todos-os-Santos.</p>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Bahia+Marina+Salvador" target="_blank" rel="noopener">Como chegar</a>
+    </article>
+    <span class="houses__rule" aria-hidden="true"></span>
+    <article class="house">
+      <span class="caps">II</span>
+      <h3>Salvador Shopping</h3>
+      <p>No mezanino do 33 Contemporâneo, no Caminho das Árvores.</p>
+      <a class="link" href="https://www.google.com/maps/search/?api=1&amp;query=Salvador+Shopping+33+Contempor%C3%A2neo" target="_blank" rel="noopener">Como chegar</a>
+    </article>
   </div>
 </section>
 
-<section class="section frame" aria-labelledby="agenda-title">
-  <div class="grid index-head reveal">
-      <span class="label">Agenda</span><span class="count">(04)</span>
-      <h2 id="agenda-title">A programação <em>chega primeiro aos associados.</em></h2>
-    </div>
-  <div class="grid bill">
-    <ol class="bill__list reveal">
-      <li><span class="count">01</span><div><strong>Encontros corporativos</strong><span class="dim">Conversas com lideranças e rodadas de relacionamento.</span></div></li>
-      <li><span class="count">02</span><div><strong>Noites gastronômicas</strong><span class="dim">Jantares harmonizados e coquetelaria de autor.</span></div></li>
-      <li><span class="count">03</span><div><strong>Programação cultural</strong><span class="dim">Música, arte e noites para receber bem.</span></div></li>
-      <li><span class="count">04</span><div><strong>Viagens do clube</strong><span class="dim">Roteiros internacionais e esportivos para associados.</span></div></li>
-    </ol>
-    <figure class="bill__photo reveal"><img src="assets/img/fotos/salao.webp" alt="Palco com cortina vermelha, piano e abajures acesos nas mesas" loading="lazy" style="object-position:50% 75%;filter:none"><figcaption><span>Noites de programação</span><a class="link-arrow" href="eventos.html">Ver a agenda <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></figcaption></figure>
+<section class="section section--last wrap" id="convite" aria-labelledby="form-title">
+  <div class="head reveal">
+    <div class="ornament" aria-hidden="true"><i></i></div>
+    <span class="caps">Por convite</span>
+    <h2 id="form-title">Poucos nomes <em>cabem neste cartão.</em></h2>
+    <p>Deixe o seu. Nossa equipe entra em contato.</p>
   </div>
-</section>
-
-<section class="section frame" aria-labelledby="associar-title">
-  <div class="grid index-head reveal">
-      <span class="label">Associação</span><span class="count">(03)</span>
-      <h2 id="associar-title">Como se tornar <em>associado.</em></h2>
-      <p>O ingresso começa com uma conversa. Sem formulário longo, sem pressa.</p>
-    </div>
-  <ol class="grid steps reveal">
-    <li><h3>Solicite seu convite</h3><p>Deixe nome e contato. Leva menos de um minuto.</p></li>
-    <li><h3>Converse com a equipe</h3><p>Entramos em contato para entender o que você procura e explicar como funciona a associação.</p></li>
-    <li><h3>Conheça a casa</h3><p>Agende uma visita, sinta o ambiente e decida com calma.</p></li>
-  </ol>
-</section>
-
-<section class="section section--last frame" id="convite" aria-labelledby="form-title">
-  <div class="grid index-head" style="margin-bottom:3rem"><span class="label">Convite</span><span class="count">(01)</span></div>
-  <div class="grid invite">
-    <div class="invite__aside">
-      <h2 id="form-title">Seu nome <em>já cabe no cartão.</em></h2>
-      <p>Preencha o pedido e veja como fica. Nossa equipe retorna pelo WhatsApp ou e-mail informado.</p>
-      <div class="card-stage">
-  <div class="member-card" aria-hidden="true">
-    <div class="member-card__inner">
-      <img class="member-card__emblem" src="assets/img/emblem-brass.svg" alt="" width="120" height="120">
-      <div class="member-card__house">The Latvian<small>Business &amp; Lounge</small></div>
-      <div class="member-card__holder">
-        <div>
-          <span class="member-card__label">Associado</span>
-          <span class="member-card__name" data-card-name>Seu nome aqui</span>
-          <span class="member-card__company" data-card-company>Sua empresa</span>
+  <div class="invite reveal">
+    <div class="card-stage">
+      <div class="member-card" aria-hidden="true">
+        <div class="member-card__inner">
+          <img class="member-card__emblem" src="assets/img/emblem-brass.svg" alt="" width="80" height="80">
+          <span class="member-card__house">The Latvian</span>
+          <div><span class="member-card__name" data-card-name>Seu nome</span><span class="member-card__label">Associado</span></div>
         </div>
-        <div class="member-card__since"><span class="member-card__label">Salvador</span><strong>Est. 1881</strong></div>
       </div>
-    </div>
-  </div>
-</div>
     </div>
     <form class="form" data-invite-form  novalidate aria-labelledby="form-title">
-      <div class="field field--full">
-        <label for="f-nome">Nome completo</label>
-        <input id="f-nome" name="nome" type="text" autocomplete="name" required maxlength="80" placeholder="Como devemos chamar você" aria-describedby="e-nome">
-        <p class="field__error" id="e-nome" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="f-empresa">Empresa <span class="optional">(opcional)</span></label>
-        <input id="f-empresa" name="empresa" type="text" autocomplete="organization" maxlength="80" placeholder="Onde você atua" aria-describedby="e-empresa">
-        <p class="field__error" id="e-empresa" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="f-cargo">Cargo <span class="optional">(opcional)</span></label>
-        <input id="f-cargo" name="cargo" type="text" autocomplete="organization-title" maxlength="60" placeholder="Sócio, diretor, CEO" aria-describedby="e-cargo">
-        <p class="field__error" id="e-cargo" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="f-email">E-mail</label>
-        <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="nome@empresa.com.br" aria-describedby="e-email">
-        <p class="field__error" id="e-email" aria-live="polite"></p>
-      </div>
-      <div class="field">
-        <label for="f-whatsapp">WhatsApp</label>
-        <input id="f-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="(71) 99999-9999" aria-describedby="e-whatsapp">
-        <p class="field__error" id="e-whatsapp" aria-live="polite"></p>
-      </div>
-      
-      <fieldset class="field field--full choices">
-        <legend>Unidade de preferência</legend>
-        <div class="choices__row">
-          <label class="choice"><input type="radio" name="unidade" value="Bahia Marina" checked><span>Bahia Marina</span></label>
-          <label class="choice"><input type="radio" name="unidade" value="Salvador Shopping"><span>Salvador Shopping</span></label>
-          <label class="choice"><input type="radio" name="unidade" value="Sem preferência"><span>Sem preferência</span></label>
+        <div class="field">
+          <label for="f-nome">Nome</label>
+          <input id="f-nome" name="nome" type="text" autocomplete="name" required maxlength="80" placeholder="Como devemos chamar você" aria-describedby="e-nome">
+          <p class="field__error" id="e-nome" aria-live="polite"></p>
         </div>
-      </fieldset>
-      <div class="field field--full">
-        <label for="f-mensagem">Conte um pouco sobre você <span class="optional">(opcional)</span></label>
-        <textarea id="f-mensagem" name="mensagem" rows="3" maxlength="1200" placeholder="O que você procura no clube, quem indicou…"></textarea>
-      </div>
-      <p class="form__status" role="status" tabindex="-1" hidden></p>
-      <div class="form__foot">
-        <p class="form__note">Seus dados são usados apenas para retornarmos o contato.</p>
-        <button class="btn" type="submit"><span>Solicitar convite</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></button>
-      </div>
-    </form>
+        <div class="form__row">
+          <div class="field">
+          <label for="f-email">E-mail</label>
+          <input id="f-email" name="email" type="email" autocomplete="email" required maxlength="120" placeholder="nome@empresa.com.br" aria-describedby="e-email">
+          <p class="field__error" id="e-email" aria-live="polite"></p>
+        </div>
+          <div class="field">
+          <label for="f-whatsapp">WhatsApp</label>
+          <input id="f-whatsapp" name="whatsapp" type="tel" inputmode="tel" autocomplete="tel-national" required placeholder="(71) 99999-9999" aria-describedby="e-whatsapp">
+          <p class="field__error" id="e-whatsapp" aria-live="polite"></p>
+        </div>
+        </div>
+        <div class="field">
+          <label for="f-empresa">Empresa <span class="optional">(opcional)</span></label>
+          <input id="f-empresa" name="empresa" type="text" autocomplete="organization" maxlength="80" placeholder="Onde você atua" aria-describedby="e-empresa">
+          <p class="field__error" id="e-empresa" aria-live="polite"></p>
+        </div>
+        <p class="form__status" role="status" tabindex="-1" hidden></p>
+        <div class="form__foot">
+          <button class="btn" type="submit"><span>Solicitar convite</span></button>
+          <p class="form__note">Respondemos com discrição, pelo WhatsApp ou e-mail.</p>
+        </div>
+      </form>
   </div>
 </section>
 </main>
 <footer class="site-footer">
-  <div class="frame">
-    <div class="grid">
-      <p>The Latvian<br>Business &amp; Lounge</p>
-      <ul>
-        <li>Bahia Marina, Salvador</li>
-        <li>Salvador Shopping, mezanino do 33 Contemporâneo</li>
-      </ul>
-      <ul>
-        <li>Segunda a sexta</li>
-        <li>12h às 18h</li>
-        <li>Somente associados</li>
-      </ul>
-      <ul>
-        <li><a href="clube.html">O Clube</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="contato.html?assunto=associado" data-member-link>Área do associado</a></li>
-      </ul>
-    </div>
-    <div class="footer-sign">
-      <img src="assets/img/emblem.svg" alt="The Latvian — Business &amp; Lounge, Est. 1881" width="104" height="104">
-      <span class="label label--dim">© <span data-year>2026</span> The Latvian · Salvador, Bahia</span>
-    </div>
+  <div class="wrap">
+    <img src="assets/img/emblem.svg" alt="The Latvian — Business &amp; Lounge, Est. 1881" width="72" height="72">
+    <nav aria-label="Rodapé">
+      <a href="clube.html">O Clube</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="contato.html">Contato</a>
+      <a href="contato.html?assunto=associado" data-member-link>Associados</a>
+    </nav>
+    <p>Bahia Marina &amp; Salvador Shopping · Salvador</p>
+    <p>Segunda a sexta, das 12h às 18h</p>
+    <span class="caps">© <span data-year>2026</span> The Latvian · Somente associados</span>
   </div>
 </footer>
 </body>

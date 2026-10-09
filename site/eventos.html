@@ -3,142 +3,105 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Eventos — The Latvian Business & Lounge</title>
-<meta name="description" content="Encontros corporativos, noites gastronômicas, programação cultural e viagens do clube para associados do The Latvian em Salvador.">
-<meta name="theme-color" content="#0a0807">
-<meta property="og:title" content="Eventos — The Latvian Business & Lounge">
-<meta property="og:description" content="Encontros corporativos, noites gastronômicas, programação cultural e viagens do clube para associados do The Latvian em Salvador.">
+<title>Eventos — The Latvian</title>
+<meta name="description" content="Encontros, jantares, música e viagens do clube, reservados aos associados do The Latvian.">
+<meta name="theme-color" content="#0b0908">
+<meta property="og:title" content="Eventos — The Latvian">
+<meta property="og:description" content="Encontros, jantares, música e viagens do clube, reservados aos associados do The Latvian.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
 <meta property="og:image" content="assets/img/fotos/salao-palco.webp">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/archivo-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 <script src="assets/js/main.js" defer></script>
 </head>
 <body data-page="eventos">
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
 <header class="site-header">
-  <div class="frame grid">
-    <a class="pill" href="index.html" aria-label="The Latvian — página inicial"><img src="assets/img/emblem.svg" alt="" width="26" height="26">The Latvian ©1881</a>
-    <nav class="nav-a" aria-label="Principal">
+  <div class="wrap">
+    <nav aria-label="Principal">
       <a href="clube.html">O Clube</a>
       <a href="eventos.html" aria-current="page">Eventos</a>
     </nav>
-    <nav class="nav-b" aria-label="Contato">
+    <a class="brand" href="index.html" aria-label="The Latvian — página inicial"><img src="assets/img/emblem.svg" alt="" width="54" height="54"></a>
+    <nav aria-label="Acesso">
       <a href="contato.html">Contato</a>
+      <a href="index.html#convite">Convite</a>
     </nav>
-    <div class="header-end">
-      <a class="member-link" href="contato.html?assunto=associado" data-member-link>Área do associado</a>
-      <a class="paren" href="index.html#convite">Solicitar convite</a>
-    </div>
-    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>(Menu)</button>
+    <button class="menu-toggle" type="button" aria-controls="mobile-menu" aria-expanded="false" data-menu-open>Menu</button>
   </div>
 </header>
 <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu" hidden>
   <div class="mobile-menu__top">
-    <a class="pill" href="index.html"><img src="assets/img/emblem.svg" alt="" width="26" height="26">The Latvian ©1881</a>
-    <button class="menu-toggle" type="button" style="display:inline-flex" data-menu-close>(Fechar)</button>
+    <a class="brand" href="index.html" aria-label="Início"><img src="assets/img/emblem.svg" alt="" width="54" height="54"></a>
+    <button class="menu-toggle" type="button" data-menu-close>Fechar</button>
   </div>
   <nav aria-label="Principal (móvel)">
-    <a href="index.html"><span class="count">01</span>Início</a>
-    <a href="clube.html"><span class="count">02</span>O Clube</a>
-    <a href="eventos.html" aria-current="page"><span class="count">03</span>Eventos</a>
-    <a href="contato.html"><span class="count">04</span>Contato</a>
+    <a href="index.html">Início</a>
+    <a href="clube.html">O Clube</a>
+    <a href="eventos.html" aria-current="page">Eventos</a>
+    <a href="contato.html">Contato</a>
   </nav>
-  <div class="mobile-menu__foot">
-    <a class="btn" href="index.html#convite">Solicitar convite</a>
-    <a class="member-link label" href="contato.html?assunto=associado" data-member-link>Área do associado</a>
-  </div>
+  <a class="btn" href="index.html#convite">Solicitar convite</a>
 </div>
 <main id="conteudo">
 
 <section class="page-hero" aria-labelledby="t">
   <div class="page-hero__photo"><img src="assets/img/fotos/jazz.webp" alt="" style="object-position:50% 35%"></div>
-  <div class="frame">
-    <div class="grid">
-      <span class="label">(Eventos)</span>
-      <h1 id="t">A agenda <em>do clube.</em></h1>
-      <p>Encontros, jantares, música e viagens com curadoria do The Latvian. As datas são enviadas aos associados.</p>
-    </div>
+  <div class="page-hero__inner wrap">
+    <span class="caps">Eventos</span>
+    <h1 id="t">A agenda <em>da casa.</em></h1>
+    <p>As datas chegam primeiro aos associados.</p>
   </div>
 </section>
 
-<section class="section frame" aria-labelledby="f-title">
-  <div class="grid index-head reveal">
-      <span class="label">Formatos</span><span class="count">(05)</span>
-      <h2 id="f-title">Pequeno o bastante para conversar. <em>Bem cuidado o bastante para lembrar.</em></h2>
-    </div>
-  <div class="grid bill">
-    <ol class="bill__list reveal">
-      <li><span class="count">01</span><div><strong>Encontros corporativos</strong><span class="dim">Conversas com lideranças, rodadas de relacionamento e apresentações entre associados.</span></div></li>
-      <li><span class="count">02</span><div><strong>Noites gastronômicas</strong><span class="dim">Jantares harmonizados, degustações e coquetelaria de autor.</span></div></li>
-      <li><span class="count">03</span><div><strong>Programação cultural</strong><span class="dim">Música ao vivo, arte e experiências para receber bem.</span></div></li>
-      <li><span class="count">04</span><div><strong>Viagens internacionais</strong><span class="dim">Roteiros organizados para associados, com a curadoria da casa.</span></div></li>
-      <li><span class="count">05</span><div><strong>Viagens esportivas</strong><span class="dim">Grandes eventos esportivos vividos em grupo.</span></div></li>
-    </ol>
-    <figure class="bill__photo reveal"><img src="assets/img/fotos/sax.webp" alt="Saxofone dourado em close, com luzes quentes ao fundo" loading="lazy" style="filter:brightness(.9)"><figcaption><span>Noites de programação</span><span>Somente associados</span></figcaption></figure>
+<section class="section wrap" aria-labelledby="f-title">
+  <div class="head reveal">
+    <div class="ornament" aria-hidden="true"><i></i></div>
+    <span class="caps">Programação</span>
+    <h2 id="f-title">Pequeno o bastante para conversar.</h2>
+  </div>
+  <ul class="list reveal">
+    <li><h3><small>I</small>Encontros</h3><p>Conversas com lideranças e rodadas de relacionamento.</p></li>
+    <li><h3><small>II</small>Jantares</h3><p>Noites harmonizadas e coquetelaria de autor.</p></li>
+    <li><h3><small>III</small>Música</h3><p>Noites de programação cultural.</p></li>
+    <li><h3><small>IV</small>Viagens</h3><p>Roteiros internacionais e esportivos do clube.</p></li>
+  </ul>
+</section>
+
+<section class="band" aria-labelledby="e-title">
+  <div class="narrow center reveal">
+    <div class="ornament" aria-hidden="true"><i></i></div>
+    <span class="caps gilt">Para empresas</span>
+    <h2 id="e-title" style="margin:1.25rem 0 1.5rem">Celebre com o seu time.</h2>
+    <p class="muted" style="font-style:italic;font-size:var(--t-lead);margin-bottom:2.5rem">Confraternizações, reuniões de diretoria e recepção de clientes, com o serviço da casa.</p>
+    <a class="btn" href="contato.html?assunto=evento#formulario">Planejar um evento</a>
   </div>
 </section>
 
-<section class="curtain" aria-labelledby="e-title">
-  <div class="frame">
-    <div class="grid index-head reveal">
-      <span class="label">Para empresas</span><span class="count">(03)</span>
-      <h2 id="e-title">Comemore <em>com o seu time.</em></h2>
-      <p>Fechou um contrato, bateu a meta, completou mais um ano? Fale com a equipe sobre receber o seu time no clube.</p>
-    </div>
-    <ul class="principles reveal" style="border-top-color:rgba(236,227,211,.2)">
-      <li class="grid"><span class="count">01</span><h3>Confraternizações</h3><p>Um brinde reservado para celebrar conquistas, com bar e serviço do clube.</p></li>
-      <li class="grid"><span class="count">02</span><h3>Reuniões de diretoria</h3><p>Privacidade e estrutura para decisões que pedem uma mesa fora do escritório.</p></li>
-      <li class="grid"><span class="count">03</span><h3>Recepção de clientes</h3><p>Receba quem importa num ambiente que fala por você.</p></li>
-    </ul>
-    <p style="margin-top:3rem"><a class="btn" href="contato.html?assunto=evento#formulario">Planejar um evento <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a></p>
-  </div>
-</section>
-
-<section class="closing" aria-labelledby="fim-title">
-  <div class="closing__wall" aria-hidden="true">
-    <figure><img src="assets/img/fotos/salao.webp" alt="" loading="lazy" style="object-position:8% 74%;transform:scale(2.6);transform-origin:8% 74%"></figure>
-    <figure><img src="assets/img/fotos/sax.webp" alt="" loading="lazy" style="object-position:55% 45%"></figure>
-    <figure><img src="assets/img/fotos/salao.webp" alt="" loading="lazy" style="object-position:30% 15%;transform:scale(2.2);transform-origin:30% 15%"></figure>
-    <figure><img src="assets/img/fotos/jazz.webp" alt="" loading="lazy" style="object-position:30% 50%"></figure>
-    <figure><img src="assets/img/fotos/salao.webp" alt="" loading="lazy" style="object-position:50% 86%;transform:scale(3);transform-origin:50% 86%"></figure>
-  </div>
-  <div class="frame closing__inner reveal">
-    <span class="label label--dim">Acesso exclusivo para associados</span>
-    <h2 id="fim-title">Receba a agenda <em>como associado.</em></h2>
-    <p>A programação completa chega primeiro para quem faz parte da casa.</p>
-    <a class="btn" href="index.html#convite">Solicitar convite <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M3 12h17M14 6l6 6-6 6"/></svg></a>
+<section class="section section--last narrow" aria-labelledby="fim-title">
+  <div class="closing reveal">
+    <img src="assets/img/emblem.svg" alt="" width="96" height="96">
+    <h2 id="fim-title">Receba a agenda.</h2>
+    <p>A programação completa chega primeiro a quem faz parte da casa.</p>
+    <a class="btn" href="index.html#convite">Solicitar convite</a>
   </div>
 </section>
 </main>
 <footer class="site-footer">
-  <div class="frame">
-    <div class="grid">
-      <p>The Latvian<br>Business &amp; Lounge</p>
-      <ul>
-        <li>Bahia Marina, Salvador</li>
-        <li>Salvador Shopping, mezanino do 33 Contemporâneo</li>
-      </ul>
-      <ul>
-        <li>Segunda a sexta</li>
-        <li>12h às 18h</li>
-        <li>Somente associados</li>
-      </ul>
-      <ul>
-        <li><a href="clube.html">O Clube</a></li>
-        <li><a href="eventos.html">Eventos</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="contato.html?assunto=associado" data-member-link>Área do associado</a></li>
-      </ul>
-    </div>
-    <div class="footer-sign">
-      <img src="assets/img/emblem.svg" alt="The Latvian — Business &amp; Lounge, Est. 1881" width="104" height="104">
-      <span class="label label--dim">© <span data-year>2026</span> The Latvian · Salvador, Bahia</span>
-    </div>
+  <div class="wrap">
+    <img src="assets/img/emblem.svg" alt="The Latvian — Business &amp; Lounge, Est. 1881" width="72" height="72">
+    <nav aria-label="Rodapé">
+      <a href="clube.html">O Clube</a>
+      <a href="eventos.html">Eventos</a>
+      <a href="contato.html">Contato</a>
+      <a href="contato.html?assunto=associado" data-member-link>Associados</a>
+    </nav>
+    <p>Bahia Marina &amp; Salvador Shopping · Salvador</p>
+    <p>Segunda a sexta, das 12h às 18h</p>
+    <span class="caps">© <span data-year>2026</span> The Latvian · Somente associados</span>
   </div>
 </footer>
 </body>

@@ -48,7 +48,7 @@ if (menu && openBtn && closeBtn) {
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
-  window.matchMedia("(min-width: 981px)").addEventListener("change", (m) => { if (m.matches && !menu.hidden) setOpen(false); });
+  window.matchMedia("(min-width: 901px)").addEventListener("change", (m) => { if (m.matches && !menu.hidden) setOpen(false); });
 }
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;

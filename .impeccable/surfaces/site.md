@@ -10,21 +10,19 @@ cliente ("mesmo estilo e cores"); build code-led, sem geração de imagem.
 
 ## Direction contract
 
-THESIS: O site é a sala de um speakeasy vista de dentro: escuro, quente, com a luz dos abajures guiando o
-olhar. Recusa o "site de clube de luxo" dourado e o hero de logo centralizado.
+THESIS: Um clube privado à meia-luz, clássico e reservado: mostra pouco, organiza tudo e sugere o resto.
+Recusa a página cheia de informação e o luxo dourado ostensivo.
 
-OWN-WORLD: Preto de sala (#0a0807), cortina bordô (#2b0709→#8f1a1c), âmbar de abajur (#e2a65a), marfim
-(#ece3d3). EB Garamond romano + itálico âmbar; rótulos Archivo em caixa-alta pequena; grade editorial de
-4 colunas com contagens entre parênteses; fotos escurecidas e grão de filme.
+OWN-WORLD: Fundo de sala (#0b0908), faixas de vinho (#1f0a0b), dourado envelhecido em filetes finos (#c6a572),
+marfim (#e9e1d2). Uma só família (EB Garamond), versaletes espaçados, ornamento de filete com losango,
+botões de moldura dupla fina, composição simétrica e centrada.
 
-STORY: Sente como é estar lá; entende que é um clube privado de negócios em Salvador; solicita convite.
+STORY: Entende em segundos que é um clube privado de negócios em Salvador, sente o mistério da casa e pede convite.
 
-FIRST VIEWPORT: Foto do salão em tela cheia quase apagada, foco de luz que segue o cursor; título enorme à
-esquerda "Os melhores negócios se fecham à meia-luz."; tagline em itálico; botão âmbar "Solicitar convite"
-à direita; régua de 4 fatos na base.
+FIRST VIEWPORT: Foto do salão quase apagada; emblema ao centro; título "Os melhores negócios se fecham à meia-luz."
+em duas linhas; uma frase; botão "Solicitar convite" e o link "Conhecer a casa".
 
-FORM: Neo-Speakeasy pedido pelo cliente com referências (Dialog Studio, Plutarch Films, fotos de jazz club).
-Seed key: n/a (launcher indisponível; direção fixada pelo cliente).
-Signature interaction: luz de abajur no hero; abajures das horas; nome gravado no cartão de associado.
+FORM: Refinamento clássico (quieter + distill) do Neo-Speakeasy, pedido pelo cliente. Seed key: n/a.
+Signature interaction: foco de luz no hero; nome gravado no cartão de associado.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
