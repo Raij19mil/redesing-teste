@@ -55,6 +55,11 @@ Os fatos abaixo vieram de matérias públicas na imprensa, não do cliente:
 
 ## Imagens
 
-Não há fotos no repositório. O emblema foi redesenhado em SVG a partir do print do site atual;
-troque pelo arquivo oficial da marca quando possível. Fotos reais do fumoir, do bar e da vista
-da Bahia Marina deixariam o site ainda mais forte.
+As fotos em `site/assets/img/fotos/` foram enviadas pelo cliente como referência de clima
+(salão com cortina vermelha, saxofone, jazz em preto e branco). **Antes de publicar:**
+
+- [ ] Confirmar o direito de uso de cada foto. A do salão veio de um perfil de outra casa (a marca
+      d'água foi cortada) e a de jazz em P&B parece ser uma fotografia histórica com autoria.
+- [ ] De preferência, trocar por fotos reais do The Latvian (fumoir, bar, mesas, vista da Bahia Marina),
+      mantendo os mesmos nomes de arquivo — o layout já está pronto para elas.
+- [ ] Trocar o emblema SVG redesenhado pelo arquivo oficial da marca.

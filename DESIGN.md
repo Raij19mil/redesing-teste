@@ -1,62 +1,61 @@
 # DESIGN — The Latvian Business & Lounge
 
-<!-- Documentado a partir do site construído em site/ (redesign 2026). -->
+<!-- Neo-Speakeasy. Documentado a partir do site construído em site/. -->
 
 ## Mundo visual
 
-A mesa do clube vista de cima: madeira escura e tabaco, o selo de latão gravado e o cartão
-de associado pousado sobre ela. Seções de leitura em papel de cardápio. Discreto, masculino
-sem caricatura, sem brilho de "luxo" genérico (nada de dourado metálico em gradiente, glass ou neon).
+Neo-Speakeasy: a sala apagada de um clube de jazz, a cortina vermelha ao fundo e a luz que vem
+dos abajures das mesas, não do teto. A estrutura é editorial (grade de 4 colunas, rótulos pequenos,
+contagens entre parênteses, legendas em itálico), herdada de folhas de contato e sites de estúdio.
+O site deve fazer sentir como é estar lá: escuro, quente, silencioso, com momentos de luz.
 
 ## Cores (tokens em `site/assets/css/style.css`, `:root`)
 
 | Token | Valor | Uso |
 |---|---|---|
-| `--night` | `#0c0a08` | Fundo principal, cabeçalho, rodapé |
-| `--night-2` | `#15110d` | Variação do fundo noturno |
-| `--tobacco` | `#2b1d13` | Seções de destaque (manifesto, eventos, convite) |
-| `--leather` | `#3a2618` | Profundidade, scrollbar |
-| `--paper` | `#ece4d2` | Seções de leitura (espaços, princípios) |
-| `--brass` | `#b8925f` | Botão primário, filetes, rótulos |
-| `--brass-hi` | `#d6b582` | Hover, ênfases, foco |
-| `--brass-ink` | `#7a5a32` | Latão sobre papel (contraste AA) |
-| `--ivory` | `#e3dac6` | Texto principal no escuro, emblema |
-| `--ivory-dim` | `#b9ae98` | Texto secundário no escuro |
-| `--sepia` / `--sepia-dim` | `#2a1d13` / `#5b4836` | Texto sobre papel |
-| `--danger` / `--danger-paper` | `#e2876b` / `#9c3a1f` | Erros de formulário |
+| `--ink` | `#0a0807` | Fundo da sala (base de todas as páginas) |
+| `--ink-2` / `--ink-3` | `#110c0a` / `#1a1311` | Profundidades, abajur apagado |
+| `--oxblood` / `--oxblood-2` | `#2b0709` / `#3e0b0e` | Seção "cortina" (Espaços, Para empresas) |
+| `--curtain` / `--curtain-hi` | `#8f1a1c` / `#c8352f` | Seleção de texto, brilho da cortina, cartão |
+| `--amber` / `--amber-hi` | `#e2a65a` / `#f3c98a` | Luz: ênfases em itálico, botão, abajures acesos, foco |
+| `--brass` | `#c39a62` | Emblema no cartão |
+| `--bone` | `#ece3d3` | Texto principal |
+| `--smoke` | `#9a8f84` | Texto secundário, rótulos apagados (≥4.5:1 sobre `--ink`) |
+| `--hair` / `--hair-strong` | marfim 14% / 28% | Filetes da grade |
 
-Estratégia: Committed — o escuro de tabaco ocupa a maior parte da página; o latão é o único acento;
-o papel aparece em blocos inteiros, nunca como cartão solto.
+Estratégia: Committed escuro. O preto ocupa a página; o vermelho aparece em faixas inteiras
+(seção cortina) e nas fotos; o âmbar é a única cor de ação e de ênfase.
 
 ## Tipografia (auto-hospedada em `site/assets/fonts/`)
 
-- **Libre Caslon Display** — títulos (`--display`). Caslon é a letra inglesa do século XIX; conversa com o "Est. 1881".
-- **Libre Caslon Text** 400/400 itálico/700 — corpo (`--text`), numerais oldstyle.
-- **Cinzel** 500/600 — navegação, botões, rótulos em versal (`--caps`); ecoa as letras romanas do emblema.
-- Escala fluida `--step--1` … `--step-4`; corpo com medida de até 64ch.
+- **EB Garamond** 400/500, romano e itálico — títulos, corpo, legendas (`--serif`). Títulos misturam
+  romano marfim com itálico âmbar ("Os melhores negócios se fecham *à meia-luz.*").
+- **Archivo** 400/500 — rótulos em caixa-alta pequenos, botões, campos (`--label`).
+- Escala fluida `--t-label` … `--t-h1` (até 7,4rem).
 
-## Componentes
+## Estrutura e componentes
 
-- **Emblema** (`assets/img/emblem*.svg`): redesenho vetorial do selo, com Cinzel embutida.
-  Variações: marfim (padrão), latão (cartão), tinta (fundo claro). Substituir pelo arquivo oficial quando houver.
-- **Cartão de associado** (`.member-card`): proporção de cartão (85,6×54), latão sobre preto, escala por container
-  query (`cqw`). Inclina com o ponteiro (desligado em `prefers-reduced-motion` e telas de toque) e recebe nome/empresa
-  do formulário em tempo real.
-- **Botões**: retos, versal Cinzel espaçada; primário latão, fantasma com filete. Sobre papel, primário sépia.
-- **Campos**: só linha inferior, rótulo em versal latão, erro em itálico abaixo do campo.
-- **Listas editoriais**: programa de eventos e princípios em linhas com filetes, sem cards.
-- **Régua "Um dia no clube"**: marcos 12h–18h que acendem conforme a leitura.
+- **Grade** `.frame .grid`: 4 colunas (2 no celular). Cabeçalho de seção = filete + rótulo (col. 1) +
+  contagem `(03)` (col. 2) + título (col. 3–4).
+- **Cabeçalho**: pílula "The Latvian ©1881" com o emblema, navegação distribuída na grade,
+  "(Solicitar convite)" entre parênteses. Fica transparente sobre a foto e escurece com blur ao rolar.
+- **Hero com luz de abajur**: foto do salão quase apagada; um foco de luz segue o cursor
+  (no toque, passeia sozinho; parado em `prefers-reduced-motion`).
+- **Cenas** (`.scene`): fotos grandes em contraponto com texto, numeradas em itálico ("1. A luz").
+- **Horas** (`.hour`): linhas 12h–18h com um abajur que acende ao rolar.
+- **Cortina** (`.curtain`): faixa vermelho-sangue com pregas sutis.
+- **Agenda** (`.bill__list`): lista numerada estilo programa de casa noturna + foto fixa.
+- **Mural** (`.closing__wall`): miniaturas espalhadas no preto antes do fechamento.
+- **Cartão de associado**: laca bordô, emblema em latão, nome gravado ao vivo pelo formulário.
+- **Botão**: pílula âmbar com brilho; links secundários em itálico âmbar com seta.
+- **Campos**: só linha inferior, texto grande em itálico no placeholder, chips em pílula.
 
-## Espaço e ritmo
+## Fotografia
 
-`--gutter` fluido, `--section` entre 4,5rem e 9,5rem, largura máxima `--wrap: 78rem`.
-Cabeçalhos de seção em duas colunas (título + apoio). Alternância noite → tabaco → papel.
+Fotos em `site/assets/img/fotos/` (salão com cortina, saxofone, jazz em P&B). Tratamento: escurecer
+(`brightness .6–.85`), manter o calor; P&B permanece P&B. Grão de filme global (`body::after`).
 
 ## Movimento
 
-Uma revelação única por seção (opacidade + leve subida + desfoque), ease-out exponencial;
-entrada do hero em cascata; cartão com "gravação" ao digitar. Tudo desligado com `prefers-reduced-motion`.
-
-## Superfícies do navegador
-
-Seleção, scrollbar, cursor de texto, foco e sublinhados temáticos em latão.
+Entrada do hero "acendendo as luzes" (foto sai do escuro), revelação única por bloco, foco de luz,
+abajures das horas e gravação do nome no cartão. Tudo desligado com `prefers-reduced-motion`.

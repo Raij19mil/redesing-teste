@@ -10,24 +10,21 @@ cliente ("mesmo estilo e cores"); build code-led, sem geração de imagem.
 
 ## Direction contract
 
-THESIS: O site é a mesa do clube vista de cima: madeira escura, o selo de latão gravado e o
-cartão de associado sobre ela. Recusa o padrão "logo centralizado sobre vídeo + parágrafo em fundo branco".
+THESIS: O site é a sala de um speakeasy vista de dentro: escuro, quente, com a luz dos abajures guiando o
+olhar. Recusa o "site de clube de luxo" dourado e o hero de logo centralizado.
 
-OWN-WORLD: Noite de tabaco (#0c0a08 → #2b1d13), latão (#b8925f / #d6b582) e marfim do emblema
-(#e3dac6). Seções de leitura em papel de cardápio (#ece4d2) com tinta sépia. Caslon Display nos
-títulos, Caslon Text no corpo, Cinzel em versaletes para navegação e botões (eco das letras do
-emblema). Filetes finos de latão, cantos retos, nenhum card arredondado.
+OWN-WORLD: Preto de sala (#0a0807), cortina bordô (#2b0709→#8f1a1c), âmbar de abajur (#e2a65a), marfim
+(#ece3d3). EB Garamond romano + itálico âmbar; rótulos Archivo em caixa-alta pequena; grade editorial de
+4 colunas com contagens entre parênteses; fotos escurecidas e grão de filme.
 
-STORY: Entende que é um clube privado de negócios em Salvador; acredita pelo endereço, horário,
-fumoir e agenda; solicita convite.
+STORY: Sente como é estar lá; entende que é um clube privado de negócios em Salvador; solicita convite.
 
-FIRST VIEWPORT: Título grande à esquerda ("Os melhores negócios se fecham à mesa certa."),
-tagline original, botão latão "Solicitar convite". À direita, o selo gigante gravado tom-sobre-tom
-sangrando para fora da tela, com o cartão de associado em latão pousado sobre ele. Régua de fatos
-(unidades · horário · associados) na base.
+FIRST VIEWPORT: Foto do salão em tela cheia quase apagada, foco de luz que segue o cursor; título enorme à
+esquerda "Os melhores negócios se fecham à meia-luz."; tagline em itálico; botão âmbar "Solicitar convite"
+à direita; régua de 4 fatos na base.
 
-FORM: Mesa do clube / cartão de associado (1º da lista própria). Seed key: n/a (launcher indisponível).
-Signature interaction: o cartão de associado ganha o nome do visitante, gravado ao vivo, enquanto ele
-preenche o pedido de convite; a régua "Um dia no clube" (12h→18h) avança com o scroll.
+FORM: Neo-Speakeasy pedido pelo cliente com referências (Dialog Studio, Plutarch Films, fotos de jazz club).
+Seed key: n/a (launcher indisponível; direção fixada pelo cliente).
+Signature interaction: luz de abajur no hero; abajures das horas; nome gravado no cartão de associado.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance

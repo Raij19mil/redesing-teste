@@ -21,7 +21,7 @@ if (LATVIAN_CONFIG.memberAreaUrl) {
 /* Cabeçalho --------------------------------------------------------- */
 const header = document.querySelector(".site-header");
 if (header) {
-  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 8);
+  const onScroll = () => header.classList.toggle("is-scrolled", window.scrollY > 40);
   onScroll();
   window.addEventListener("scroll", onScroll, { passive: true });
 }
@@ -48,7 +48,7 @@ if (menu && openBtn && closeBtn) {
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   });
   menu.querySelectorAll("a").forEach((a) => a.addEventListener("click", () => setOpen(false)));
-  window.matchMedia("(min-width: 1081px)").addEventListener("change", (m) => { if (m.matches && !menu.hidden) setOpen(false); });
+  window.matchMedia("(min-width: 981px)").addEventListener("change", (m) => { if (m.matches && !menu.hidden) setOpen(false); });
 }
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -86,22 +86,41 @@ if ("IntersectionObserver" in window && !reduceMotion) {
   reveals.forEach((el) => el.classList.add("is-in"));
 }
 
-/* Um dia no clube: a régua avança com a leitura --------------------- */
-const ruler = document.querySelector(".day__ruler");
-if (ruler) {
-  const hours = [...ruler.querySelectorAll(".day__hour")];
+/* Um dia no clube: os abajures acendem com a leitura ---------------- */
+const hours = [...document.querySelectorAll(".hour")];
+if (hours.length) {
   const update = () => {
     const vh = window.innerHeight;
-    let lit = 0;
-    hours.forEach((h, i) => {
-      const on = h.getBoundingClientRect().top < vh * 0.72;
-      h.classList.toggle("is-lit", on);
-      if (on) lit = i + 1;
-    });
-    ruler.style.setProperty("--progress", `${lit === 0 ? 0 : ((lit - 0.5) / hours.length) * 100}%`);
+    hours.forEach((h) => h.classList.toggle("is-lit", h.getBoundingClientRect().top < vh * 0.7));
   };
-  if (reduceMotion) { hours.forEach((h) => h.classList.add("is-lit")); ruler.style.setProperty("--progress", "100%"); }
+  if (reduceMotion) hours.forEach((h) => h.classList.add("is-lit"));
   else { update(); window.addEventListener("scroll", update, { passive: true }); window.addEventListener("resize", update); }
+}
+
+/* Hero: a luz do abajur segue o visitante --------------------------- */
+const hero = document.querySelector(".hero");
+const dark = document.querySelector(".hero__dark");
+if (hero && dark && !reduceMotion) {
+  let tx = 50, ty = 62, x = 50, y = 62, raf = 0, idle = 0;
+  const loop = () => {
+    x += (tx - x) * 0.08; y += (ty - y) * 0.08;
+    dark.style.setProperty("--x", `${x.toFixed(2)}%`);
+    dark.style.setProperty("--y", `${y.toFixed(2)}%`);
+    raf = Math.abs(tx - x) + Math.abs(ty - y) > 0.05 ? requestAnimationFrame(loop) : 0;
+  };
+  const aim = (nx, ny) => { tx = nx; ty = ny; if (!raf) raf = requestAnimationFrame(loop); };
+  if (window.matchMedia("(hover: hover)").matches) {
+    hero.addEventListener("pointermove", (e) => {
+      const r = hero.getBoundingClientRect();
+      aim(((e.clientX - r.left) / r.width) * 100, ((e.clientY - r.top) / r.height) * 100);
+    });
+    hero.addEventListener("pointerleave", () => aim(50, 62));
+  } else {
+    // Toque: a luz passeia devagar pela sala.
+    const drift = (t) => { aim(50 + Math.sin(t / 3200) * 22, 58 + Math.cos(t / 4100) * 10); idle = requestAnimationFrame(drift); };
+    idle = requestAnimationFrame(drift);
+    new IntersectionObserver(([en]) => { if (!en.isIntersecting) cancelAnimationFrame(idle); else idle = requestAnimationFrame(drift); }).observe(hero);
+  }
 }
 
 /* Formulário de convite / contato ----------------------------------- */
