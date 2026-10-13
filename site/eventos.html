@@ -10,7 +10,9 @@
 <meta property="og:description" content="Encontros, jantares, música e viagens do clube, reservados aos associados do The Latvian.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="assets/img/fotos/salao-palco.webp">
+<meta property="og:image" content="https://www.latvian.com.br/assets/img/fotos/salao-palco.webp">
+<meta property="og:url" content="https://www.latvian.com.br/eventos">
+<link rel="canonical" href="https://www.latvian.com.br/eventos">
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,35 +51,39 @@
 <main id="conteudo">
 
 <section class="page-hero" aria-labelledby="t">
-  <div class="page-hero__photo"><img src="assets/img/fotos/jazz.webp" alt="" style="object-position:50% 35%"></div>
+  <div class="page-hero__photo"><img src="assets/img/fotos/jazz.webp" alt="" width="1080" height="1350" class="focus-30"></div>
   <div class="page-hero__inner wrap">
-    <span class="caps">Eventos</span>
     <h1 id="t">A agenda <em>da casa.</em></h1>
     <p>As datas chegam primeiro aos associados.</p>
   </div>
 </section>
 
 <section class="section wrap" aria-labelledby="f-title">
-  <div class="head reveal">
+  <div class="head head--left reveal">
     <div class="ornament" aria-hidden="true"><i></i></div>
-    <span class="caps">Programação</span>
-    <h2 id="f-title">Pequeno o bastante para conversar.</h2>
+    <h2 id="f-title">Pequeno o bastante <em>para conversar.</em></h2>
   </div>
-  <ul class="list reveal">
-    <li><h3><small>I</small>Encontros</h3><p>Conversas com lideranças e rodadas de relacionamento.</p></li>
-    <li><h3><small>II</small>Jantares</h3><p>Noites harmonizadas e coquetelaria de autor.</p></li>
-    <li><h3><small>III</small>Música</h3><p>Noites de programação cultural.</p></li>
-    <li><h3><small>IV</small>Viagens</h3><p>Roteiros internacionais e esportivos do clube.</p></li>
+  <ul class="principles reveal">
+    <li><h3>Encontros</h3><p>Conversas com lideranças e rodadas de relacionamento.</p></li>
+    <li><h3>Jantares</h3><p>Noites harmonizadas e coquetelaria de autor.</p></li>
+    <li><h3>Música</h3><p>Noites de programação cultural, no volume da casa.</p></li>
+    <li><h3>Viagens</h3><p>Roteiros internacionais e esportivos do clube.</p></li>
   </ul>
 </section>
 
-<section class="band" aria-labelledby="e-title">
-  <div class="narrow center reveal">
-    <div class="ornament" aria-hidden="true"><i></i></div>
-    <span class="caps gilt">Para empresas</span>
-    <h2 id="e-title" style="margin:1.25rem 0 1.5rem">Celebre com o seu time.</h2>
-    <p class="muted" style="font-style:italic;font-size:var(--t-lead);margin-bottom:2.5rem">Confraternizações, reuniões de diretoria e recepção de clientes, com o serviço da casa.</p>
-    <a class="btn" href="contato.html?assunto=evento#formulario">Planejar um evento</a>
+<figure class="plate reveal">
+  <img src="assets/img/fotos/salao-palco.webp" alt="O salão preparado para uma noite de música, com palco de cortina vermelha" width="1080" height="608" loading="lazy">
+</figure>
+
+<section class="field-wine" aria-labelledby="e-title">
+  <div class="wrap split reveal">
+    <figure><img src="assets/img/fotos/sax.webp" alt="Saxofone dourado em close, com luzes quentes ao fundo" width="1080" height="1439" loading="lazy" class="focus-40"></figure>
+    <div class="split__text">
+      <div class="ornament" aria-hidden="true"><i></i></div>
+      <h2 id="e-title">Celebre <em>com o seu time.</em></h2>
+      <p>Confraternizações, reuniões de diretoria e recepção de clientes, com o serviço da casa.</p>
+      <a class="btn" href="contato.html?assunto=evento#formulario">Planejar um evento</a>
+    </div>
   </div>
 </section>
 
@@ -92,16 +98,16 @@
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <img src="assets/img/emblem.svg" alt="The Latvian — Business &amp; Lounge, Est. 1881" width="72" height="72">
+    <p class="site-footer__name" aria-hidden="true">The <em>Latvian</em></p>
     <nav aria-label="Rodapé">
       <a href="clube.html">O Clube</a>
       <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
-      <a href="contato.html?assunto=associado" data-member-link>Associados</a>
+      <a href="contato.html?assunto=associado#formulario" data-member-link>Sou associado</a>
     </nav>
     <p>Bahia Marina &amp; Salvador Shopping · Salvador</p>
     <p>Segunda a sexta, das 12h às 18h</p>
-    <span class="caps">© <span data-year>2026</span> The Latvian · Somente associados</span>
+    <small>© <span data-year>2026</span> The Latvian — Business &amp; Lounge · Somente associados</small>
   </div>
 </footer>
 </body>

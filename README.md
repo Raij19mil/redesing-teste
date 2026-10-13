@@ -16,7 +16,7 @@ site/                 ← site estático pronto para publicar (abra site/index.h
 PRODUCT.md            Contexto do produto (impeccable)
 DESIGN.md             Sistema visual (impeccable)
 .impeccable/          Brief de direção e capturas de revisão (não publicar)
-.claude/skills/       Skill impeccable
+.claude/skills/       Skills impeccable e taste-skill (skills-lock.json)
 ```
 
 Rodar localmente: `cd site && python3 -m http.server 8000` → http://localhost:8000
@@ -51,7 +51,12 @@ Os fatos abaixo vieram de matérias públicas na imprensa, não do cliente:
 - `formEndpoint`: URL que recebe o formulário via POST JSON (Formspree, n8n, API própria).
   Vazio = abre o e-mail do visitante com a mensagem pronta.
 - `email`: e-mail de contato (hoje `contato@latvian.com.br`, **a confirmar**).
-- `memberAreaUrl`: link da área do associado. Vazio = leva ao contato.
+- `memberAreaUrl`: link da área do associado. Vazio = o link do rodapé se chama "Sou associado" e leva
+  ao formulário com esse assunto; preenchido, vira "Área do associado".
+- Sem `formEndpoint`, o formulário avisa antes do envio que abre o e-mail do visitante. Com endpoint, o
+  formulário some e fica só a confirmação.
+- Domínio: `og:image`, `og:url` e `canonical` apontam para `https://www.latvian.com.br`. Se o domínio
+  final for outro, troque nos `<head>` das páginas.
 
 ## Imagens
 
@@ -63,3 +68,17 @@ As fotos em `site/assets/img/fotos/` foram enviadas pelo cliente como referênci
 - [ ] De preferência, trocar por fotos reais do The Latvian (fumoir, bar, mesas, vista da Bahia Marina),
       mantendo os mesmos nomes de arquivo — o layout já está pronto para elas.
 - [ ] Trocar o emblema SVG redesenhado pelo arquivo oficial da marca.
+
+Onde cada foto real deve entrar (hoje as 4 fotos de referência se repetem nesses lugares):
+
+| Lugar | Hoje | Foto ideal |
+|---|---|---|
+| Clube · Um dia no clube · 12h | `salao.webp` | Almoço servido numa mesa do clube |
+| Clube · 14h | `salao-palco.webp` | Mesa de trabalho / reunião |
+| Clube · 16h | `sax.webp` | Fumoir |
+| Clube · 18h | `jazz.webp` | Brinde no bar |
+| Eventos · prancha larga | `salao-palco.webp` | Salão montado para um evento |
+| Eventos · Para empresas | `sax.webp` | Confraternização de empresa |
+| Contato | `salao.webp` | Fachada ou entrada de uma das unidades |
+
+Para trocar só um lugar sem afetar os outros, salve a foto nova com outro nome e ajuste o `src`.
