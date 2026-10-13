@@ -10,7 +10,8 @@
 <meta property="og:description" content="Esta página não existe.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="pt_BR">
-<meta property="og:image" content="assets/img/fotos/salao-palco.webp">
+<meta property="og:image" content="https://www.latvian.com.br/assets/img/fotos/salao-palco.webp">
+
 <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/eb-garamond-latin-400-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -49,27 +50,29 @@
 <main id="conteudo">
 
 <section class="page-hero" aria-labelledby="t">
-  <div class="page-hero__photo"><img src="assets/img/fotos/salao.webp" alt="" style="object-position:50% 30%"></div>
+  <div class="page-hero__photo"><img src="assets/img/fotos/salao.webp" alt="" width="1080" height="1190" class="focus-30"></div>
   <div class="page-hero__inner wrap">
-    <span class="caps">404</span>
     <h1 id="t">Esta porta <em>não abre.</em></h1>
-    <p>Volte ao início.</p>
+    <p>A página que você procurou não existe ou mudou de lugar.</p>
+    <div class="actions page-hero__actions">
+      <a class="btn" href="index.html">Voltar ao início</a>
+      <a class="link" href="contato.html">Falar com a casa</a>
+    </div>
   </div>
 </section>
-<section class="section section--last center"><a class="btn" href="index.html">Voltar ao início</a></section>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <img src="assets/img/emblem.svg" alt="The Latvian — Business &amp; Lounge, Est. 1881" width="72" height="72">
+    <p class="site-footer__name" aria-hidden="true">The <em>Latvian</em></p>
     <nav aria-label="Rodapé">
       <a href="clube.html">O Clube</a>
       <a href="eventos.html">Eventos</a>
       <a href="contato.html">Contato</a>
-      <a href="contato.html?assunto=associado" data-member-link>Associados</a>
+      <a href="contato.html?assunto=associado#formulario" data-member-link>Sou associado</a>
     </nav>
     <p>Bahia Marina &amp; Salvador Shopping · Salvador</p>
     <p>Segunda a sexta, das 12h às 18h</p>
-    <span class="caps">© <span data-year>2026</span> The Latvian · Somente associados</span>
+    <small>© <span data-year>2026</span> The Latvian — Business &amp; Lounge · Somente associados</small>
   </div>
 </footer>
 </body>

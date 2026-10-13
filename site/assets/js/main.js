@@ -12,9 +12,11 @@ const LATVIAN_CONFIG = {
 document.documentElement.classList.add("js");
 
 /* Área do associado ------------------------------------------------- */
+// Sem URL configurada, o link continua honesto: "Sou associado" leva ao formulário com o assunto certo.
 if (LATVIAN_CONFIG.memberAreaUrl) {
   document.querySelectorAll("[data-member-link]").forEach((a) => {
     a.href = LATVIAN_CONFIG.memberAreaUrl;
+    a.textContent = "Área do associado";
   });
 }
 
@@ -127,11 +129,14 @@ if (hero && dark && !reduceMotion) {
 const form = document.querySelector("[data-invite-form]");
 if (form) {
   const nameOut = document.querySelector("[data-card-name]");
-  const companyOut = document.querySelector("[data-card-company]");
   const nameIn = form.elements.namedItem("nome");
-  const companyIn = form.elements.namedItem("empresa");
   const status = form.querySelector(".form__status");
   const submit = form.querySelector("[type=submit]");
+  const note = form.querySelector("[data-form-note]");
+  const viaEmail = !LATVIAN_CONFIG.formEndpoint;
+
+  // Sem endpoint, avisa antes do clique que o envio passa pelo e-mail do visitante.
+  if (viaEmail && note) note.textContent = "Ao enviar, abrimos o seu e-mail com a mensagem pronta para a casa.";
 
   // Assunto vindo do link (?assunto=evento)
   const subject = new URLSearchParams(location.search).get("assunto");
@@ -152,10 +157,6 @@ if (form) {
     }, 120);
   };
   if (nameIn && nameOut) { nameOut.dataset.placeholder = nameOut.textContent; nameIn.addEventListener("input", engrave); }
-  if (companyIn && companyOut) {
-    companyOut.dataset.placeholder = companyOut.textContent;
-    companyIn.addEventListener("input", () => { companyOut.textContent = companyIn.value.trim() || companyOut.dataset.placeholder; });
-  }
 
   // Máscara simples de telefone BR
   const phone = form.elements.namedItem("whatsapp");
@@ -194,14 +195,15 @@ if (form) {
     el.addEventListener("input", () => { if (el.closest("[data-invalid]")) validate(el); });
   });
 
-  const show = (tone, title, text) => {
+  const show = (tone, title, ...parts) => {
     status.hidden = false;
     status.dataset.tone = tone;
     status.innerHTML = "";
     const s = document.createElement("strong"); s.textContent = title;
-    status.append(s, document.createTextNode(text));
+    status.append(s, ...parts.map((p) => (typeof p === "string" ? document.createTextNode(p) : p)));
     status.focus();
   };
+  const mailLink = (href, text) => { const a = document.createElement("a"); a.href = href; a.textContent = text; return a; };
 
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
@@ -215,11 +217,14 @@ if (form) {
     const data = Object.fromEntries(new FormData(form).entries());
     const first = (data.nome || "").split(" ")[0];
 
-    if (!LATVIAN_CONFIG.formEndpoint) {
+    if (viaEmail) {
       const body = Object.entries(data).filter(([, v]) => v).map(([k, v]) => `${k}: ${v}`).join("\n");
       const subj = form.dataset.subject || "Solicitação de convite — The Latvian";
-      location.href = `mailto:${LATVIAN_CONFIG.email}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
-      show("ok", "Quase lá.", ` Abrimos seu aplicativo de e-mail com a mensagem pronta. Se ele não abrir, escreva para ${LATVIAN_CONFIG.email}.`);
+      const href = `mailto:${LATVIAN_CONFIG.email}?subject=${encodeURIComponent(subj)}&body=${encodeURIComponent(body)}`;
+      location.href = href;
+      show("ok", "Falta só enviar o e-mail.",
+        " A mensagem já está pronta no seu aplicativo de e-mail; o pedido chega à casa quando você enviá-la. Se nada abriu, ",
+        mailLink(href, "tente abrir de novo"), ` ou escreva para ${LATVIAN_CONFIG.email}.`);
       return;
     }
 
@@ -236,8 +241,9 @@ if (form) {
       });
       if (!res.ok) throw new Error(String(res.status));
       form.reset();
-      if (nameOut) nameOut.textContent = first ? `${first}, bem-vindo` : nameOut.dataset.placeholder;
-      show("ok", `Recebemos sua solicitação${first ? `, ${first}` : ""}.`, " Nossa equipe entra em contato em breve pelo WhatsApp ou e-mail informado.");
+      form.classList.add("is-sent");
+      if (nameOut && first) nameOut.textContent = first;
+      show("ok", `Recebemos, ${first || "obrigado"}.`, " Nossa equipe entra em contato em breve pelo WhatsApp ou e-mail informado.");
     } catch {
       show("error", "Não conseguimos enviar agora.", ` Seus dados continuam no formulário. Tente de novo em instantes ou escreva para ${LATVIAN_CONFIG.email}.`);
     } finally {
