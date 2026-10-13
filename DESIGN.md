@@ -31,11 +31,16 @@ As fotos trazem o vermelho, sempre dessaturadas e escurecidas.
 
 ## Tipografia
 
-Uma só família, **EB Garamond** (400/500, romano e itálico), auto-hospedada em `site/assets/fonts/`.
-- Títulos em romano com a parte final em itálico dourado.
-- Navegação, botões e rótulos de campo em **versaletes** espaçados. **Nunca** um rótulo pequeno
-  acima de um título (eyebrow) nem numeração I/II/III: o título fala sozinho.
-- Seis tamanhos (`--t-small`, `--t-body`, `--t-lead`, `--t-h3`, `--t-h2`, `--t-h1`); título principal até 5.2rem.
+Clássico e moderno numa só página: um Didone de 1800 sobre um geométrico dos anos 1920.
+
+- **Bodoni Moda** (variável, `opsz` + `wght`, 400–900) em títulos, ledes, citação, horas e nome do rodapé.
+  Peso 400 nos títulos (500 em `h3`), tracking -0.02em, `font-optical-sizing: auto`. O final do título
+  segue em itálico dourado (`<em>`), a assinatura da casa.
+- **Jost** (variável, 300–700; herdeira da Futura, de 1927) no texto corrido, nos campos e em toda a
+  interface: navegação, botões e links em caixa-alta, 500, `letter-spacing: .16em`, `--t-ui` = .875rem.
+- Rótulos de campo em Jost 500, caixa normal, 1rem. Nada de texto pequeno em itálico: notas e horários
+  vão em Jost reto, em `--mist`.
+- Fontes auto-hospedadas em `site/assets/fonts/` (licença OFL junto).
 
 ## Componentes
 
@@ -44,8 +49,11 @@ Uma só família, **EB Garamond** (400/500, romano e itálico), auto-hospedada e
 - **Campos de cor** (`.field-ink`, `.field-wine`): a seção inteira muda de tom, chapado, sem degradê.
 - **Cabeçalho**: simétrico, links em versaletes à esquerda e à direita, emblema ao centro (na home ele
   aparece só depois de rolar, para o emblema central do hero reinar sozinho).
-- **Botão** (`.btn`): moldura dupla fina dourada, texto em versaletes; preenche de dourado no hover.
-- **Link** (`.link`): itálico dourado com filete inferior.
+- **Botão** (`.btn`): placa de latão chapada (`--gilt`) com os quatro cantos chanfrados (`clip-path`,
+  o octógono das portas art déco), texto Jost em caixa-alta e uma seta desenhada em SVG que avança no
+  hover. Hover clareia para `--gilt-hi`; foco é um anel interno (o recorte cortaria o `outline`).
+  No máximo um por tela.
+- **Link** (`.link`): Jost em caixa-alta dourada; um filete de 35% da largura que se completa no hover.
 - **Cenas**: uma foto por vez com moldura interna fina, texto curto ao lado, alternando lados.
 - **Princípios** (`.principles`): título grande em itálico à esquerda e uma frase à direita, separados por espaço.
 - **Um dia no clube** (`.day` / `.hour`): quatro horas com foto; os "abajures" acendem em sequência com a leitura.
