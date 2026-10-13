@@ -14,7 +14,7 @@ THESIS: Um clube privado à meia-luz, clássico e reservado: mostra pouco, organ
 Recusa a página cheia de informação e o luxo dourado ostensivo.
 
 OWN-WORLD: Fundo de sala (#0b0908), faixas de vinho (#1f0a0b), dourado envelhecido em filetes finos (#c6a572),
-marfim (#e9e1d2). Uma só família (EB Garamond), versaletes espaçados, ornamento de filete com losango,
+marfim (#e9e1d2). Bodoni Moda nos títulos e Jost na interface (ver DESIGN.md), ornamento de filete com losango,
 botões de moldura dupla fina, composição simétrica e centrada.
 
 STORY: Entende em segundos que é um clube privado de negócios em Salvador, sente o mistério da casa e pede convite.
